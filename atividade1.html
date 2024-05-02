@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3. Leia os anos de nascimento de duas pessoas e depois calcule suas idades. Em seguida,
+        imprima o nome e a idade de cada uma delas e indique qual delas é a mais nova.</h1>
+
+    <p>Digite o nome da pessoa 1:</p> <span id="nomepessoa1"></span>
+    <p>Digite o nome da pessoa 2:</p> <span id="nomepessoa2"></span>
+    <p> Digite o ano em que a pessoa 1 nasceu: <span id="anopessoa1"></span></p>
+    <p> Digite o ano em que a pessoa 2 nasceu: <span id="anopessoa2"></span></p>
+    <p> A idade atual da pessoa 1 em 2024 é igual á: <span id="idadepessoa1"></span></p>
+    <p> A idade atual da pessoa 2 em 2024 é igual á: <span id="idadepessoa2"></span></p>
+    <p>Resultado: <span id="resultado"></span></p>
+    <P>Resultado final: <span id="resultadofinal"></span></P>
+
+</body>
+
+<script>
+
+let nomepessoa1;
+let nomepessoa2;
+let anopessoa1;
+let anopessoa2;
+let idadepessoa1;
+let idadepessoa2;
+let resultado;
+let resultadofinal;
+
+
+nomepessoa1=prompt("Digite o nome da pessoa 1 ")
+anopessoa1=Number(prompt("Digite o ano em que a pessoa 1 nasceu "))
+nomepessoa2=prompt("Digite o nome da pessoa 2 ")
+anopessoa2=Number(prompt("Digite o ano em que a pessoa 2 nasceu "))
+
+idadepessoa1= (2024 - anopessoa1)
+idadepessoa2= (2024 - anopessoa2)
+
+if(idadepessoa1>idadepessoa2){
+
+    resultado= nomepessoa1 +" é mais velha que "+ nomepessoa2
+    }else{   
+    resultado= nomepessoa1+ " é mais nova que "+nomepessoa2
+    }  
+
+resultadofinal = nomepessoa1+ " tem "+ idadepessoa1+ " e " +nomepessoa2+ " tem "+ idadepessoa2+ " logo "+ resultado
+
+document.getElementById('nomepessoa1').innerHTML=nomepessoa1
+document.getElementById('nomepessoa2').innerHTML=nomepessoa2
+document.getElementById('idadepessoa1').innerHTML=idadepessoa1
+document.getElementById('idadepessoa2').innerHTML=idadepessoa2
+document.getElementById('resultado').innerHTML=resultado
+document.getElementById('resultadofinal').innerHTML=resultadofinal
+document.getElementById('anopessoa1').innerHTML=anopessoa1
+document.getElementById('anopessoa2').innerHTML=anopessoa2
+
+
+</script>
+</html>
